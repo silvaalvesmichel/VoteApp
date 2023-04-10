@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "e65ed936-eb33-468d-a3fb-99d31e33f70c",
+		"name": "VoteApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"teste5\",\n    \"email\":\"teste5@gmail.com\",\n    \"password\":\"654321\",\n    \"password_confirmation\":\"654321\",\n    \"cpf\":\"65590367077\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\" : \"teste4@gmail.com\",\n\"password\" : \"654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Agenda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZTRAZ21haWwuY29tIiwiZXhwIjoxNjgxMDU4OTc1fQ.A55Sz00NHH20Pe1DYqA3lY_Jb2-tPhVr79f2SmyulMFzSFA290LWbVVYdwXOcHbQ77FODT61q1e-HC_Vhv4MoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\":\"assembleia de baixa de salario\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/agenda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"agenda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Agenda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZTRAZ21haWwuY29tIiwiZXhwIjoxNjgxMDU4OTc1fQ.A55Sz00NHH20Pe1DYqA3lY_Jb2-tPhVr79f2SmyulMFzSFA290LWbVVYdwXOcHbQ77FODT61q1e-HC_Vhv4MoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/agenda/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"agenda",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZTRAZ21haWwuY29tIiwiZXhwIjoxNjgxMDU4OTc1fQ.A55Sz00NHH20Pe1DYqA3lY_Jb2-tPhVr79f2SmyulMFzSFA290LWbVVYdwXOcHbQ77FODT61q1e-HC_Vhv4MoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save session",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZTRAZ21haWwuY29tIiwiZXhwIjoxNjgxMDU4OTc1fQ.A55Sz00NHH20Pe1DYqA3lY_Jb2-tPhVr79f2SmyulMFzSFA290LWbVVYdwXOcHbQ77FODT61q1e-HC_Vhv4MoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_agenda\":1,\n    \"expiration_date\": [\n        2023,\n        4,\n        8,\n        15,\n        2,\n        49\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/session",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get session",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZTRAZ21haWwuY29tIiwiZXhwIjoxNjgxMDU4OTc1fQ.A55Sz00NHH20Pe1DYqA3lY_Jb2-tPhVr79f2SmyulMFzSFA290LWbVVYdwXOcHbQ77FODT61q1e-HC_Vhv4MoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/session/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"session",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save vote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZTRAZ21haWwuY29tIiwiZXhwIjoxNjgxMDU4OTc1fQ.A55Sz00NHH20Pe1DYqA3lY_Jb2-tPhVr79f2SmyulMFzSFA290LWbVVYdwXOcHbQ77FODT61q1e-HC_Vhv4MoA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_session\":2,\n    \"id_associated\":1,\n    \"tipo_voto\":\"sim\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/vote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid cpf",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/users/valid/05642756117",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"users",
+						"valid",
+						"05642756117"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

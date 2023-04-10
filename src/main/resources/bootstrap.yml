@@ -1,0 +1,4 @@
+cloud:
+  aws:
+    sqs:
+      endpoint: https://localhost.localstack.cloud:4566
