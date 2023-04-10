@@ -11,7 +11,7 @@ Projeto Desenvolvido em:
 1-Para excutar o projeto acessar a pasta local com o cmd e executar o comando -  docker compose up
 2-Abrir o https://app.localstack.cloud/dashboard e ir em SQS e criar a fila - active-session
 3-Acessar com o cmd a pasta raiz do projeto e executar o comando - mvn clean install.
-4-Rodar a API userValidation (urlAPI - ) (api externa que essa faz faz integração)
+4-Rodar a API userValidation (urlAPI - https://github.com/silvaalvesmichel/userValidation) (api externa que essa faz faz integração)
 5-Antes de Executar a classe VoteApplication colocar o seguinte valor em Enviroment variables =  SPRING_PROFILES_ACTIVE=local;
 
 Na pasta local contem a collection, aonde contem todas as chamadas dos serviços rest..
